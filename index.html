@@ -3,28 +3,22 @@
 <link rel="stylesheet" href="stylesheet.css">
 
 <body>
-
     <div id="bla">Bla bla bla</div>
     <input id="chk" type="checkbox" onchange="toggleStyle(this)" />
-    <div id="wololo">wololo</div>
-    <input id="wchk" type="checkbox" onchange="toggleStyle(this)" />
+  
+    <div id="wololo">Wololo</div>
+    <input id="chk" type="checkbox" onchange="toggleStyle(this)" />
 
 
     <script>
-        var bla = document.getElementById('bla')
-        var wololo = document.getElementById('wololo')
-        var chk = document.getElementById('chk')
-        var wchk = document.getElementById('wchk')
-        
-        function toggleStyle(onchosen) {
-            onchosen.classList.toggle('stilig');
+        function toggleStyle(checkedElement) {
+            var bla = document.getElementById('bla')
+            var chk = document.getElementById('chk')
+            var isChecked = chk.checked;
+            bla.classList.toggle('stilig', isChecked);
 
-            
+            checkedElement.classList.add('div.selected::before');
         }
-
-       
-
-
     </script>
 </body>
 
