@@ -3,22 +3,31 @@
 <link rel="stylesheet" href="stylesheet.css">
 
 <body>
-    <div id="bla">Bla bla bla</div>
-    <input id="chk" type="checkbox" onchange="toggleStyle(this)" />
-  
-    <div id="wololo">Wololo</div>
-    <input id="chk" type="checkbox" onchange="toggleStyle(this)" />
+    <h2>Click a text and choose a check to choose style</h2>
+    
+    <div id="bla" onclick="choosery(this)">Bla bla bla</div>
+    
+    <input id="chk" type="checkbox" onchange="toggleStyle('style1',this)" />
+    <input id="chk" type="checkbox" onchange="toggleStyle('style2',this)" />
+    <input id="chk" type="checkbox" onchange="toggleStyle('style3',this)" />
+    <input id="chk" type="checkbox" onchange="toggleStyle('style4',this)" />
+  <div id="wololo" onclick="choosery(this)">Wololo</div>
 
 
     <script>
-        function toggleStyle(checkedElement) {
-            var bla = document.getElementById('bla')
-            var chk = document.getElementById('chk')
-            var isChecked = chk.checked;
-            bla.classList.toggle('stilig', isChecked);
-
-            checkedElement.classList.add('div.selected::before');
+        var bla = document.getElementById('bla')
+        var wololo = document.getElementById('wololo')
+        
+        function choosery(thechosenone) {
+            thechosenone.classList.toggle("selected");
         }
+
+        function toggleStyle(cssClassName, chkBox) {
+            
+            bla.classList.toggle(cssClassName, chkBox.checked);
+            wololo.classList.toggle(cssClassName, chkBox.checked);
+        }
+
     </script>
 </body>
 

@@ -1,17 +1,27 @@
 body {
-    background-color: rgb(172, 164, 156);
+    background-color: rgb(122, 2, 112);
 }
 
-.stilig {
-    color: khaki;
-    background-color: rgb(122, 85, 67);
+.style1 {
+    
+    background-color: rgb(165, 14, 59);
 }
 
-.berry {
+.style2 {
 
-    color: rgb(158, 0, 47);
-    background-color: rgb(250, 91, 125);
+    border: solid;
+    border-color: rgb(250, 91, 125);
 }
+
+.style3 {
+
+    padding: 20px;
+}
+
+.style4 {
+    color: rgb(255, 139, 164);
+}
+
 
 div.selected::before {
     content: "🡆";
