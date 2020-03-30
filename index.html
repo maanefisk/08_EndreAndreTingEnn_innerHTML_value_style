@@ -18,15 +18,21 @@
         var bla = document.getElementById('bla')
         var wololo = document.getElementById('wololo')
         
+        
         function choosery(thechosenone) {
-            thechosenone.classList.toggle("selected");
-        }
-
-        function toggleStyle(cssClassName, chkBox) {
+            if thechosenone.classList.toggle("selected"){
+                function toggleStyle(cssClassName, chkBox) {
             
             bla.classList.toggle(cssClassName, chkBox.checked);
             wololo.classList.toggle(cssClassName, chkBox.checked);
         }
+            }
+        }
+
+     
+
+        
+
 
     </script>
 </body>
