@@ -7,30 +7,26 @@
     
     <div id="bla" onclick="choosery(this)">Bla bla bla</div>
     
-    <input id="chk" type="checkbox" onchange="toggleStyle('style1',this)" />
-    <input id="chk" type="checkbox" onchange="toggleStyle('style2',this)" />
-    <input id="chk" type="checkbox" onchange="toggleStyle('style3',this)" />
-    <input id="chk" type="checkbox" onchange="toggleStyle('style4',this)" />
+    <input id="style1" type="checkbox" onchange="toggleStyle(this)" />
+    <input id="style2" type="checkbox" onchange="toggleStyle(this)" />
+    <input id="style3" type="checkbox" onchange="toggleStyle(this)" />
+    <input id="style4" type="checkbox" onchange="toggleStyle(this)" />
   <div id="wololo" onclick="choosery(this)">Wololo</div>
 
 
     <script>
-        var bla = document.getElementById('bla')
-        var wololo = document.getElementById('wololo')
-        
+    
+        var valgtDiv;
         
         function choosery(thechosenone) {
-            if (bla = choosery) 
-            if (thechosenone.classList.toggle("selected")) {
-                function toggleStyle(cssClassName, chkBox) {
-            
-            bla.classList.toggle(cssClassName, chkBox.checked);
-            wololo.classList.toggle(cssClassName, chkBox.checked);
-        }
-            }
+            thechosenone.classList.toggle("selected");   
+            valgtDiv = thechosenone;
         }
 
-     
+        function toggleStyle(selectedCheck) {
+            console.log(valgtDiv)
+            valgtDiv.classList.toggle(selectedCheck.id, selectedCheck.checked);
+            }
 
         
 
